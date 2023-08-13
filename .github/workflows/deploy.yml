@@ -21,4 +21,4 @@ jobs:
       - name: Deploy to VPS
         run: |
           ssh -o StrictHostKeyChecking=no sonata@20.235.119.62 'mkdir -p /var/www/html/wordpress'
-          scp -o StrictHostKeyChecking=no -r WordPress-Deployment/. sonata@20.235.119.62:/var/www/html/wordpress
+          mv /WordPress-Deployment/* /var/www/html/wordpress/
